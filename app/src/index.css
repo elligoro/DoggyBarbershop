@@ -1,0 +1,158 @@
+body{
+    background-color: rgb(252, 218, 224);
+    background-image: url("../src/images/background.jpg");
+    background-size: cover;
+    background-repeat:no-repeat;
+    font-family:sans-serif;
+}
+
+h1,h2,h3{
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    margin: 30px 0;
+    text-shadow: 0px 0px 6px skyblue;
+}
+
+tr, td {
+    border: solid 1px #ccc;
+}
+
+#app{
+    margin: 30px auto;
+    max-width: 950px;
+}
+
+.alerts{
+    color: #d5145b;
+    width: 200px;
+    margin: auto;
+}
+
+.log-header{
+    position:relative;
+}
+
+.log-btn{
+    position:absolute;
+    top: 0;
+    left: 0;
+}
+
+input {
+    border-radius: 6px;
+    border: 1px solid #aaa;
+    padding: 3px;
+}
+
+form div {
+    margin: 6px;
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+}
+
+label {
+    padding: 6px 15px;
+}
+
+.log-section {
+    width: 420px;
+    display: block;
+    margin: 30px auto;
+}
+
+
+input.btn.btn-primary {
+    display: block;
+    margin: 15px auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+.btn, .btn:hover, .btn:active, .btn:focus{
+    background-color: #7E3972;
+}
+
+.btn-lg{
+    max-width: 150px;
+    margin: auto;
+    display: block;
+}
+
+.ReactModal__Content{
+    position: absolute;
+    inset: 40px;
+    border: 1px solid rgb(204, 204, 204);
+    background: rgb(255, 255, 255);
+    overflow: auto;
+    border-radius: 4px;
+    outline: none;
+    padding: 20px;
+    max-width: 450px;
+    margin: auto;
+    max-height: 480px;
+}
+
+.ReactModal__Content .alerts p {
+    margin-bottom: 0;
+}
+
+.ReactModal__Content .alerts {
+    margin: 0;
+}
+
+
+.container-fluid {
+    padding: 0;
+}
+
+.actions-bar {
+    padding: 12px 0;
+}
+
+table {
+    width: 100%;
+    background-color: white;
+}
+
+th {
+    text-align: center;
+    padding: 9px;
+}
+
+td {
+    border: solid 1px #ccc;
+    padding: 9px;
+}
+
+td:nth-child(3) {
+    text-align: center;
+}
+
+.form-field label {
+    padding-top: 15px;
+    padding-left: 0;
+    font-weight: bolder;
+}
+
+button.btn.btn-primary.close {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+
+button.btn.btn-primary.submit {
+    margin: 15px 0;
+}
+
+.submit-actions {
+    padding-left: 60px;
+}
+
+.submit-actions a.btn.btn-primary {
+    display: block;
+    margin: 15px 0;
+}
