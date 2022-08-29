@@ -13,9 +13,9 @@ const ReadDetailsComponent = (props)=>{
                 <label>Name:</label>
                 <p>{order.name}</p>
                 <label>Scheduled date:</label>
-                <p>{new Date(order.bookingDate).toLocaleString('he-IL')}</p>
+                <p>{new Date(order.bookingDate + 'Z').toLocaleString('he-IL')}</p>
                 <label>Created Date:</label>
-                <p>{new Date(order.createdDate).toLocaleString('he-IL')}</p>
+                <p>{new Date(order.createdDate + 'Z').toLocaleString('he-IL')}</p>
                 </div>
         </div>
         

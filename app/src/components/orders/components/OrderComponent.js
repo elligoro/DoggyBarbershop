@@ -13,8 +13,8 @@ const OrderComponent = (props)=>{
 
     useEffect(()=>{
         var order = props.order();
-        setDate(new Date(order.bookingDate));
-        setTime(getTimeStringFormat(new Date(order.bookingDate)));
+        setDate(new Date(order.bookingDate + 'Z'));
+        setTime(getTimeStringFormat(new Date(order.bookingDate + 'Z')));
         setOrderId(order.orderId);
     },[]);
 
@@ -53,15 +53,16 @@ const OrderComponent = (props)=>{
     }
 
     function handleOnSubmit(e){
+        if(time.length < 5)
+        return setErrors("wrong time format");
+        
         const timeArr = time.split(":");
-        console.log(date);
         const savedDate = new Date(date.getFullYear(),
                                     date.getMonth(),
                                     date.getDate(),
                                     timeArr[0],
                                     timeArr[1]); 
 
-        console.log(savedDate);
         props.onSubmit({
                         bookingDate: savedDate,
                         orderId: orderId});

@@ -8,7 +8,7 @@ import ActionsBar from "../../common/ActionsBar";
 const OrdersList = ({ orders, accountId, isAccountOrderExist, openModal, deleteOrder,showDetails })=>{
     
     const isOrdersExist = orders?.length > 0;
-    const formatedOrders = isOrdersExist ? orders.map(o => { return { orderId: o.orderId, name: o.name, bookingDate: new Date(o.bookingDate).toLocaleString('he-IL') }}) : null
+    const formatedOrders = isOrdersExist ? orders.map(o => { return { orderId: o.orderId, name: o.name, bookingDate: new Date(o.bookingDate + 'Z').toLocaleString('he-IL') }}) : null
 
     return (<div className="container-fluid">
 

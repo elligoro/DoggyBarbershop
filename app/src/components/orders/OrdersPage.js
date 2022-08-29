@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { render } from "react-dom";
 import PropTypes from "prop-types";
 import OrdersList from "./components/OrdersList";
-import OrdersLogic from "../../logic/orders/OrdersPage";
 import * as ordersApi from "../../services/OrdersService"; 
 import ModalPopUp from "../common/ModalPopUp";
 import OrderComponent from "./components/OrderComponent";
@@ -86,6 +85,7 @@ class OrdersPage extends Component {
     };
 
     async submitOrder(updatedOrder){
+
         let { orders } = await ordersApi.addOrder(updatedOrder,this.cookie);
         
         this.setState(prevstate => ({ ...prevstate,
